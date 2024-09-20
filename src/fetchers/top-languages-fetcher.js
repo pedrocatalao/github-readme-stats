@@ -48,12 +48,10 @@ const fetcher = (variables, token) => {
       variables,
     },
     {
-      Authorization: `token ${token}`,
+      Authorization: `token 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`,
     },
   );
 };
-
-logger.log(fetcher);
 
 /**
  * @typedef {import("./types").TopLangData} TopLangData Top languages data.
