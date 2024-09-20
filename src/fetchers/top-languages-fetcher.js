@@ -53,7 +53,7 @@ const fetcher = (variables, token) => {
   );
 };
 
-logger.info(fetcher);
+logger.log(fetcher);
 
 /**
  * @typedef {import("./types").TopLangData} TopLangData Top languages data.
