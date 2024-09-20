@@ -36,7 +36,6 @@ export default async (req, res) => {
     border_radius,
     number_format,
     border_color,
-    role,
     rank_icon,
     show,
   } = req.query;
@@ -76,7 +75,6 @@ export default async (req, res) => {
         showStats.includes("prs_merged_percentage"),
       showStats.includes("discussions_started"),
       showStats.includes("discussions_answered"),
-      parseArray(role),
     );
 
     let cacheSeconds = clampValue(
