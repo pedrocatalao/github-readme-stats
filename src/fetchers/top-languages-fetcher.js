@@ -28,7 +28,7 @@ const fetcher = (variables, token) => {
       query userInfo($login: String!, $ownerAffiliations: [RepositoryAffiliation]) {
         user(login: $login) {
           # do not fetch forks
-          repositories(ownerAffiliations: [OWNER,COLLABORATOR], isFork: false, first: 100) {
+          repositories(ownerAffiliations: [OWNER], isFork: false, first: 100) {
             nodes {
               name
               languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
@@ -52,6 +52,8 @@ const fetcher = (variables, token) => {
     },
   );
 };
+
+logger.info(fetcher);
 
 /**
  * @typedef {import("./types").TopLangData} TopLangData Top languages data.
