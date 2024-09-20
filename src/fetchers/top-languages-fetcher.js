@@ -61,7 +61,8 @@ const fetcher = (variables, token) => {
  * Fetch top languages for a given username.
  *
  * @param {string} username GitHub username.
- * @param {string[]} exclude_repo List of repositories to exclude.
+ * @param {string[]} exclude_repo List of repositories to exclude. Default: [].
+ * @param {string[]} ownerAffiliations The owner affiliations to filter by. Default: OWNER.
  * @param {number} size_weight Weightage to be given to size.
  * @param {number} count_weight Weightage to be given to count.
  * @returns {Promise<TopLangData>} Top languages data.
@@ -69,9 +70,9 @@ const fetcher = (variables, token) => {
 const fetchTopLanguages = async (
   username,
   exclude_repo = [],
+  ownerAffiliations = [],
   size_weight = 1,
   count_weight = 0,
-  ownerAffiliations = [],
 ) => {
   if (!username) {
     throw new MissingParamError(["username"]);
