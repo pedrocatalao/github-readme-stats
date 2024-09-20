@@ -28,7 +28,7 @@ const fetcher = (variables, token) => {
       query userInfo($login: String!, $ownerAffiliations: [RepositoryAffiliation]) {
         user(login: $login) {
           # do not fetch forks
-          repositories(ownerAffiliations: [OWNER], isFork: false, first: 100) {
+          repositories(ownerAffiliations: $ownerAffiliations, isFork: false, first: 100) {
             nodes {
               name
               languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
@@ -48,7 +48,7 @@ const fetcher = (variables, token) => {
       variables,
     },
     {
-      Authorization: `token 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`,
+      Authorization: `token ${token}`,
     },
   );
 };
