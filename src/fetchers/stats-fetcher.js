@@ -259,7 +259,7 @@ const fetchStats = async (
     includeMergedPullRequests: include_merged_pull_requests,
     includeDiscussions: include_discussions,
     includeDiscussionsAnswers: include_discussions_answers,
-    ownerAffiliations);
+    ownerAffiliations,
   });
 
   // Catch GraphQL errors.
