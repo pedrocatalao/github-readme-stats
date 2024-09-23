@@ -105,6 +105,8 @@ const fetchTopLanguages = async (
   let repoNodes = res.data.data.user.repositories.nodes;
   let repoToHide = {};
 
+  logger.error(repoNodes);
+
   // populate repoToHide map for quick lookup
   // while filtering out
   if (exclude_repo) {
