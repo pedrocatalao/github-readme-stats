@@ -28,7 +28,7 @@ const fetcher = (variables, token) => {
       query userInfo($login: String!, $ownerAffiliations: [RepositoryAffiliation]) {
         user(login: $login) {
           # do not fetch forks
-          repositories(ownerAffiliations: $ownerAffiliations, isFork: false, first: 50) {
+          repositories(ownerAffiliations: [OWNER,COLLABORATOR], isFork: false, first: 50) {
             nodes {
               name
               languages(first: 6, orderBy: {field: SIZE, direction: DESC}) {
