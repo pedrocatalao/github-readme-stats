@@ -80,7 +80,7 @@ const fetchTopLanguages = async (
 
   ownerAffiliations = parseOwnerAffiliations(ownerAffiliations);
 
-  const res = await retryer(fetcher, { login: username, ownerAffiliations});
+  const res = await retryer(fetcher, { login: username, ownerAffiliations });
 
   if (res.data.errors) {
     logger.error(res.data.errors);
