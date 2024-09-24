@@ -584,7 +584,7 @@ const parseEmojis = (str) => {
 /**
  * Parse owner affiliations.
  *
- * @param {string[]} affiliations
+ * @param {string[]} affiliations Array of repo affiliations
  * @returns {string[]} Parsed affiliations.
  *
  * @throws {CustomError} If affiliations contains invalid values.
