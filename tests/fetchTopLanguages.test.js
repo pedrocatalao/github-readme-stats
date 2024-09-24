@@ -84,7 +84,7 @@ describe("FetchTopLanguages", () => {
   it("should fetch correct language data while excluding the 'test-repo-1' repository", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, data_langs);
 
-    let repo = await fetchTopLanguages("anuraghazra", ["test-repo-1"], [OWNER]);
+    let repo = await fetchTopLanguages("anuraghazra", ["test-repo-1"], ["OWNER"]);
     expect(repo).toStrictEqual({
       HTML: {
         color: "#0f0",
