@@ -25,7 +25,7 @@ const fetcher = (variables, token) => {
   return request(
     {
       query: `
-      query userInfo($login: String!, $ownerAffiliations: [RepositoryAffiliation]) {
+      query userInfo($login: String!) {
         user(login: $login) {
           # do not fetch forks
           repositories(ownerAffiliations: [OWNER,ORGANIZATION_MEMBER,COLLABORATOR], isFork: false, first: 100) {
