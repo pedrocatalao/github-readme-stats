@@ -1,5 +1,5 @@
  <h2 align="left">GitHub Readme Stats</h2>
- <p align="left">Get dynamically generated GitHub stats on your READMEs!</p>
+ <p align="left">Get dynamically generated GitHub stats on your READMEs!!</p>
 
 
 # Features <!-- omit in toc -->
